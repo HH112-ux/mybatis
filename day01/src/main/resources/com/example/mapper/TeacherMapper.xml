@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.TeacherMapper">
+
+    <!-- 查询全部教师 -->
+    <select id="findAll" resultType="Teacher">
+        SELECT id, name, addr, age, job, sal FROM teacher
+    </select>
+
+</mapper>

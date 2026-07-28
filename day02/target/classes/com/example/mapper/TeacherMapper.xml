@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.TeacherMapper">
+
+    <!-- 1. 插入一条教师记录 -->
+    <insert id="insert" parameterType="Teacher">
+        INSERT INTO teacher (name, addr, age, job, sal)
+        VALUES (#{name}, #{addr}, #{age}, #{job}, #{sal})
+    </insert>
+
+    <!-- 2. 根据地址模糊查询（查询某省的员工） -->
+    <select id="findByAddr" parameterType="String" resultType="Teacher">
+        SELECT id, name, addr, age, job, sal
+        FROM teacher
+        WHERE addr LIKE CONCAT(#{addr}, '%')
+    </select>
+
+    <!-- 3. 计算某省员工的平均工资 -->
+    <select id="avgSalByAddr" parameterType="String" resultType="Double">
+        SELECT AVG(sal)
+        FROM teacher
+        WHERE addr LIKE CONCAT(#{addr}, '%')
+    </select>
+
+    <!-- 4. 将所有年龄超过30岁的销售员提升为销售经理 -->
+    <update id="promoteSalesmen" parameterType="int">
+        UPDATE teacher
+        SET job = '销售经理'
+        WHERE job = '销售员' AND age > #{age}
+    </update>
+
+    <!-- 5. 删除年龄超过指定值的员工 -->
+    <delete id="deleteByAge" parameterType="int">
+        DELETE FROM teacher WHERE age > #{age}
+    </delete>
+
+</mapper>
