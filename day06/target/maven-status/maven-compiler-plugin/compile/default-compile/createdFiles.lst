@@ -1,0 +1,6 @@
+com/example/LoginApp.class
+com/example/pojo/User.class
+com/example/utils/MyBatisUtils.class
+com/example/mapper/UserMapper.class
+com/example/pojo/Role.class
+com/example/pojo/Permision.class

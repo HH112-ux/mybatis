@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.UserMapper">
+
+    <!-- 1. 登录验证：根据账号和密码查询用户 -->
+    <select id="findByUnameAndPwd" resultType="User">
+        SELECT uid, uname, pwd, lasttime
+        FROM users
+        WHERE uname = #{uname} AND pwd = #{pwd}
+    </select>
+
+    <!-- 2. 查询用户的所有角色
+         关联：users_role(ur) JOIN role(r) ON ur.rid = r.rid
+    -->
+    <select id="findRolesByUid" resultType="Role">
+        SELECT r.rid, r.rname
+        FROM role r
+        INNER JOIN users_role ur ON r.rid = ur.rid
+        WHERE ur.uid = #{uid}
+    </select>
+
+    <!-- 3. 查询用户的所有可操作权限（DISTINCT 去重）
+         关联：users_role(ur) JOIN role_permision(rp) ON ur.rid = rp.rid
+               JOIN permision(p) ON rp.pid = p.pid
+    -->
+    <select id="findPermisionsByUid" resultType="Permision">
+        SELECT DISTINCT p.pid, p.pname, p.url
+        FROM permision p
+        INNER JOIN role_permision rp ON p.pid = rp.pid
+        INNER JOIN users_role ur ON rp.rid = ur.rid
+        WHERE ur.uid = #{uid}
+    </select>
+
+    <!-- 4. 更新最后访问时间 -->
+    <update id="updateLasttime">
+        UPDATE users SET lasttime = #{lasttime} WHERE uid = #{uid}
+    </update>
+
+</mapper>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.example.TeacherTest" time="0.238" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/caspian/mybatis/day05/target/test-classes:/Users/caspian/mybatis/day05/target/classes:/Users/caspian/.m2/repository/org/mybatis/mybatis/3.5.16/mybatis-3.5.16.jar:/Users/caspian/.m2/repository/com/mysql/mysql-connector-j/8.4.0/mysql-connector-j-8.4.0.jar:/Users/caspian/.m2/repository/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.jar:/Users/caspian/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/caspian/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-25.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/caspian/mybatis/day05/target/surefire/surefirebooter-20260731172910724_3.jar /Users/caspian/mybatis/day05/target/surefire 2026-07-31T17-29-10_695-jvmRun1 surefire-20260731172910724_1tmp surefire_0-20260731172910724_2tmp"/>
+    <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="TeacherTest#testDeleteByIds"/>
+    <property name="surefire.test.class.path" value="/Users/caspian/mybatis/day05/target/test-classes:/Users/caspian/mybatis/day05/target/classes:/Users/caspian/.m2/repository/org/mybatis/mybatis/3.5.16/mybatis-3.5.16.jar:/Users/caspian/.m2/repository/com/mysql/mysql-connector-j/8.4.0/mysql-connector-j-8.4.0.jar:/Users/caspian/.m2/repository/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.jar:/Users/caspian/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/caspian/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/caspian"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-25.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/caspian/mybatis/day05"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/caspian/mybatis/day05/target/surefire/surefirebooter-20260731172910724_3.jar"/>
+    <property name="user.script" value="Hans"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
+    <property name="java.runtime.version" value="25.0.2+10-LTS-69"/>
+    <property name="user.name" value="caspian"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="26.3.1"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/caspian/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/7f/dk69_vkd5cdg1jc6kjxs7lzc0000gn/T/"/>
+    <property name="java.version" value="25.0.2"/>
+    <property name="user.dir" value="/Users/caspian/mybatis/day05"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/caspian/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.0.2+10-LTS-69"/>
+    <property name="stdin.encoding" value="UTF-8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="testDeleteByIds" classname="com.example.TeacherTest" time="0.222">
+    <system-out><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+Class not found: org.jboss.vfs.VFS
+JBoss 6 VFS API is not available in this environment.
+Class not found: org.jboss.vfs.VirtualFile
+VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+Using VFS adapter org.apache.ibatis.io.DefaultVFS
+Find JAR URL: file:/Users/caspian/mybatis/day05/target/classes/com/example/pojo
+Not a JAR: file:/Users/caspian/mybatis/day05/target/classes/com/example/pojo
+Reader entry: Teacher.class
+Listing file:/Users/caspian/mybatis/day05/target/classes/com/example/pojo
+Find JAR URL: file:/Users/caspian/mybatis/day05/target/classes/com/example/pojo/Teacher.class
+Not a JAR: file:/Users/caspian/mybatis/day05/target/classes/com/example/pojo/Teacher.class
+Reader entry: ����&amp#0;&amp#0;&amp#0;4&amp#0;Q
+Checking to see if class com.example.pojo.Teacher matches criteria [is assignable to Object]
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+Find JAR URL: file:/Users/caspian/mybatis/day05/target/classes/com/example/mapper
+Not a JAR: file:/Users/caspian/mybatis/day05/target/classes/com/example/mapper
+Reader entry: TeacherMapper.class
+Reader entry: TeacherMapper.xml
+Listing file:/Users/caspian/mybatis/day05/target/classes/com/example/mapper
+Find JAR URL: file:/Users/caspian/mybatis/day05/target/classes/com/example/mapper/TeacherMapper.class
+Not a JAR: file:/Users/caspian/mybatis/day05/target/classes/com/example/mapper/TeacherMapper.class
+Reader entry: ����&amp#0;&amp#0;&amp#0;4&amp#0;!&amp#7;&amp#0;&amp#2;&amp#1;&amp#0; com/example/mapper/TeacherMapper&amp#7;&amp#0;&amp#4;&amp#1;&amp#0;&amp#16;java/lang/Object&amp#1;&amp#0;&amp#11;batchInsert&amp#1;&amp#0;&amp#19;(Ljava/util/List;)I&amp#1;&amp#0;	Signature&amp#1;&amp#0;/(Ljava/util/List<Lcom/example/pojo/Teacher;>;)I&amp#1;&amp#0;&amp#12;findByCities&amp#1;&amp#0;"(Ljava/util/List;)Ljava/util/List;&amp#1;&amp#0;R(Ljava/util/List<Ljava/lang/String;>;)Ljava/util/List<Lcom/example/pojo/Teacher;>;&amp#1;&amp#0;"RuntimeVisibleParameterAnnotations&amp#1;&amp#0;%Lorg/apache/ibatis/annotations/Param;&amp#1;&amp#0;&amp#5;value&amp#1;&amp#0;&amp#6;cities&amp#1;&amp#0;&amp#17;avgSalByProvinces&amp#1;&amp#0;$(Ljava/util/List;)Ljava/lang/Double;&amp#1;&amp#0;8(Ljava/util/List<Ljava/lang/String;>;)Ljava/lang/Double;&amp#1;&amp#0;	provinces&amp#1;&amp#0;&amp#12;updateByCity&amp#1;&amp#0;:(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;)I&amp#1;&amp#0;&amp#4;city&amp#1;&amp#0;&amp#3;sal&amp#1;&amp#0;&amp#3;job&amp#1;&amp#0;&amp#11;deleteByIds&amp#1;&amp#0;&amp#5;([I)I&amp#1;&amp#0;&amp#3;ids&amp#1;&amp#0;&amp#7;findAll&amp#1;&amp#0;&amp#18;()Ljava/util/List;&amp#1;&amp#0;.()Ljava/util/List<Lcom/example/pojo/Teacher;>;&amp#1;&amp#0;
+Find JAR URL: file:/Users/caspian/mybatis/day05/target/classes/com/example/mapper/TeacherMapper.xml
+Not a JAR: file:/Users/caspian/mybatis/day05/target/classes/com/example/mapper/TeacherMapper.xml
+Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+Checking to see if class com.example.mapper.TeacherMapper matches criteria [is assignable to Object]
+===== 5. 动态删除 id 数组 [3, 5] 的员工 =====
+--- 删除前 ---
+Opening JDBC Connection
+Created connection 1345401730.
+==>  Preparing: SELECT id, name, addr, age, job, sal FROM teacher
+==> Parameters: 
+<==    Columns: id, name, addr, age, job, sal
+<==        Row: 1, 张三, 江苏省南京市, 35, 区域总监, 20000
+<==        Row: 2, 李四, 江苏省苏州市, 32, 销售经理, 15000
+<==        Row: 3, 王五, 四川省成都市, 26, 销售经理, 12000
+<==        Row: 4, 赵六, 吉林省长春市, 27, 财务, 10000
+<==        Row: 5, 刘七, 吉林省吉林市, 24, 销售员, 6000
+<==        Row: 6, 吴八, 陕西省西安市, 31, 销售员, 7000
+<==      Total: 6
+ID    姓名       地址              年龄    职务         工资      
+----------------------------------------------------------
+1     张三       江苏省南京市          35    区域总监       20000   
+2     李四       江苏省苏州市          32    销售经理       15000   
+3     王五       四川省成都市          26    销售经理       12000   
+4     赵六       吉林省长春市          27    财务         10000   
+5     刘七       吉林省吉林市          24    销售员        6000    
+6     吴八       陕西省西安市          31    销售员        7000    
+共 6 条记录
+
+==>  Preparing: DELETE FROM teacher WHERE id IN ( ? , ? )
+==> Parameters: 3(Integer), 5(Integer)
+<==    Updates: 2
+受影响行数：2
+--- 删除后 ---
+==>  Preparing: SELECT id, name, addr, age, job, sal FROM teacher
+==> Parameters: 
+<==    Columns: id, name, addr, age, job, sal
+<==        Row: 1, 张三, 江苏省南京市, 35, 区域总监, 20000
+<==        Row: 2, 李四, 江苏省苏州市, 32, 销售经理, 15000
+<==        Row: 4, 赵六, 吉林省长春市, 27, 财务, 10000
+<==        Row: 6, 吴八, 陕西省西安市, 31, 销售员, 7000
+<==      Total: 4
+ID    姓名       地址              年龄    职务         工资      
+----------------------------------------------------------
+1     张三       江苏省南京市          35    区域总监       20000   
+2     李四       江苏省苏州市          32    销售经理       15000   
+4     赵六       吉林省长春市          27    财务         10000   
+6     吴八       陕西省西安市          31    销售员        7000    
+共 4 条记录
+
+Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@50313382]
+Returned connection 1345401730 to pool.
+]]></system-out>
+  </testcase>
+</testsuite>

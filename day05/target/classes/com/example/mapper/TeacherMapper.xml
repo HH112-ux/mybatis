@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.TeacherMapper">
+
+    <!-- 1. 动态批量插入：使用 <foreach> 拼接 VALUES 后的多个 (...)
+         生成 SQL: INSERT INTO teacher (...) VALUES (?, ?, ...), (?, ?, ...), ...
+    -->
+    <insert id="batchInsert" parameterType="java.util.List">
+        INSERT INTO teacher (name, addr, age, job, sal) VALUES
+        <foreach collection="list" item="t" separator=",">
+            (#{t.name}, #{t.addr}, #{t.age}, #{t.job}, #{t.sal})
+        </foreach>
+    </insert>
+
+    <!-- 2. 查询给定城市（可多个）的所有员工：使用 <foreach> 拼接 IN 条件
+         生成 SQL: SELECT ... FROM teacher WHERE addr IN (?, ?, ...)
+    -->
+    <select id="findByCities" resultType="Teacher">
+        SELECT id, name, addr, age, job, sal FROM teacher
+        <where>
+            addr IN
+            <foreach collection="cities" item="city" open="(" separator="," close=")">
+                #{city}
+            </foreach>
+        </where>
+    </select>
+
+    <!-- 3. 统计给定省份（可多个）的员工平均工资：使用 <foreach> 拼接 OR LIKE
+         生成 SQL: SELECT AVG(sal) FROM teacher WHERE addr LIKE ? OR addr LIKE ?
+    -->
+    <select id="avgSalByProvinces" resultType="java.lang.Double">
+        SELECT AVG(sal) FROM teacher
+        <where>
+            <foreach collection="provinces" item="province" separator="OR">
+                addr LIKE CONCAT(#{province}, '%')
+            </foreach>
+        </where>
+    </select>
+
+    <!-- 4. 更新给定城市员工的工资和职务：使用 <set> + <if> 动态拼接 SET 子句
+         <set> 标签会自动去掉末尾多余的逗号
+         生成 SQL: UPDATE teacher SET sal=?, job=? WHERE addr LIKE ?
+    -->
+    <update id="updateByCity">
+        UPDATE teacher
+        <set>
+            <if test="sal != null">
+                sal = #{sal},
+            </if>
+            <if test="job != null and job != ''">
+                job = #{job},
+            </if>
+        </set>
+        WHERE addr LIKE CONCAT(#{city}, '%')
+    </update>
+
+    <!-- 5. 删除给定 id 数组的员工：使用 <foreach> 拼接 IN 条件
+         生成 SQL: DELETE FROM teacher WHERE id IN (?, ?, ...)
+    -->
+    <delete id="deleteByIds">
+        DELETE FROM teacher WHERE id IN
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- 辅助：查询全部 -->
+    <select id="findAll" resultType="Teacher">
+        SELECT id, name, addr, age, job, sal FROM teacher
+    </select>
+
+</mapper>
